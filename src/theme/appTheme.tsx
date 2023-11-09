@@ -4,6 +4,7 @@ import { ThemeContext } from '../context/Theme/ThemeContext';
 
 
 const { theme: { colors: Colores } } = useContext(ThemeContext);
+
 export const styles = StyleSheet.create({
     globalMargin: {
         marginHorizontal: 10,

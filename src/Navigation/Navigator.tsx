@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
+import SplashScreen from 'react-native-splash-screen';
 import { View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -22,6 +23,11 @@ const Stack = createStackNavigator();
 export const Navigator = () => {
 
   const { theme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
+
 
   return (
     <View
